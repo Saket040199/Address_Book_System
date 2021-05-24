@@ -1,34 +1,29 @@
 package com.bl.Amodel;
 
 public class Person {
-    private String firstName;
-    private String lastName;
-    private String address;
-    private String city;
-    private String state;
-    private String zip;
-    private String phoneNumber;
-    private String email;
+    public String firstName;
+    public String lastName;
+    public String area;
+    public String city;
+    public String state;
+    public int pin;
+    public int phoneNumber;
+    public String email;
 
-    public Person(String firstName, String lastName, String address, String city, String state, String zip2,
-            String phoneNumber2, String email) {
+    public Person(String firstName, String lastName, String area, String city, String state, int pin,
+            int phoneNumber, String email) {
 
         this.firstName = firstName;
         this.lastName = lastName;
-        this.address = address;
+        this.area = area;
         this.city = city;
         this.state = state;
-        this.zip = zip2;
-        this.phoneNumber = phoneNumber2;
+        this.pin = pin;
+        this.phoneNumber = phoneNumber;
         this.email = email;
     }
-
-    public Person() {
-        this("", "", "", "", "", "", "", "");
-    }
-
-    
-    public String getFirstName() {
+      
+	public String getFirstName() {
 		return firstName;
 	}
 
@@ -39,17 +34,17 @@ public class Person {
 	public String getLastName() {
 		return lastName;
 	}
-
+	
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getArea() {
+		return area;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setArea(String area) {
+		this.area = area;
 	}
 
 	public String getCity() {
@@ -59,7 +54,6 @@ public class Person {
 	public void setCity(String city) {
 		this.city = city;
 	}
-
 	public String getState() {
 		return state;
 	}
@@ -68,19 +62,18 @@ public class Person {
 		this.state = state;
 	}
 
-	public String getZip() {
-		return zip;
+	public int getPin() {
+		return pin;
 	}
 
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
+    public void setpin(int nextInt) {
 
-	public String getPhoneNumber() {
+    }
+	public int getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
+	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
@@ -92,10 +85,11 @@ public class Person {
 		this.email = email;
 	}
 
-	public String toString() {
-        return "Details of: " + firstName + " " + lastName + "\n" + "Address: " + address + "\n" + "City: " + city
-                + "\n" + "State: " + state + "\n" + "Zip: " + zip + "\n" + "Phone Number: " + phoneNumber + "\n"
-                + "Email: " + email;
+    public String toString() {
+        return "Details of: " + firstName + " " + lastName + "\n" + "Area: " + area + "\n" + "City: " + city + "\n"
+                + "State: " + state + "\n" + "Pin: " + pin + "\n" + "Phone Number: " + phoneNumber + "\n" + "Email: "
+                + email;
     }
+
 
 	    }
