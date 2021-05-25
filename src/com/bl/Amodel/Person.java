@@ -3,98 +3,124 @@ package com.bl.Amodel;
 public class Person {
     private String firstName;
     private String lastName;
-    private String area;
+    private String address;
     private String city;
     private String state;
-    private int pin;
-    private long phoneNumber;
+    private int zip;
+    private String phoneNumber;
     private String email;
 
-   public Person(String first_name, String last_name, String address, String city, String state, int zip,
-            long phone_number, String email) {
-        this.firstName = first_name;
-        this.lastName = last_name;
-        this.area = address;
+    public Person(String firstName, String lastName, String address, String city, String state, int zip,
+                    String phoneNumber, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
         this.city = city;
         this.state = state;
-        this.pin = zip;
-        this.phoneNumber = phone_number;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
         this.email = email;
     }
 
-    Person() {
-        this(" ", " ", " ", " ", " ", 0, 0, " ");
-    }
 
     public String getFirstName() {
-        return this.firstName;
+        return firstName;
     }
 
-    public void setFirstName(String fname) {
+
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+
     public String getLastName() {
-        return this.lastName;
+        return lastName;
     }
 
-    public void setLastName(String lname) {
+
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public String getArea() {
-        return this.area;
+
+    public String getAddress() {
+        return address;
     }
 
-    public void setArea(String ar) {
-        this.area = area;
+
+    public void setAddress(String address) {
+        this.address = address;
     }
+
 
     public String getCity() {
-        return this.city;
+        return city;
     }
 
-    public void setCity(String cty) {
+
+    public void setCity(String city) {
         this.city = city;
     }
 
+
     public String getState() {
-        return this.state;
+        return state;
     }
 
-    public void setState(String st) {
+
+    public void setState(String state) {
         this.state = state;
     }
 
-    public int getPin() {
-        return this.pin;
+
+    public int getZip() {
+        return zip;
     }
 
-    public void setZip(int zp) {
-        this.pin = pin;
+
+    public void setZip(int zip) {
+        this.zip = zip;
     }
 
-    public long getPhoneNumber() {
-        return this.phoneNumber;
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhoneNumber(int phn) {
+
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
+
     public String getEmail() {
-        return this.email;
+        return email;
     }
 
-    public void setEmail(String eml) {
+
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public String toString() {
-        return "Details of: " + firstName + " " + lastName + "\n" + "Area: " + area + "\n" + "City: " + city + "\n"
-                + "State: " + state + "\n" + "pin: " + pin + "\n" + "Phone Number: " + phoneNumber + "\n" + "Email: "
-                + email;
+
+    public String getFullName() {
+        return (firstName + " " + lastName);
     }
 
-    
+
+    @Override
+    public String toString() {
+        return ("Name : " + firstName + " " + lastName + "\t" + "Address : " + address + "\t" + "City : " + city + "\t" + "State : " + state + "\t" + "Zip : " + zip + "\t" + "Phone Number : " + phoneNumber + "\t" +
+                "Email : " + email);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Person))
+            return false;
+        Person person = (Person) o;
+        return firstName.equals(person.firstName) && lastName.equals(person.lastName);
+    }
 }
