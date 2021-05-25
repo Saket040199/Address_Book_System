@@ -96,6 +96,5 @@ public class Person {
                 + email;
     }
 
-    public void setPin(int nextInt) {
-
-    }	    }
+    
+}

@@ -10,8 +10,7 @@ public class AddressBookDetails {
     public String firstName;
     public String lastName;
     public String area, city, state, email;
-    public int pin;
-    public long phoneNumber;
+    public int pin, phoneNumber;
     public static int indexNum;
 
     public AddressBookDetails(String addressBookName) {
@@ -19,6 +18,7 @@ public class AddressBookDetails {
     }
 
     public static ArrayList<Person> list = new ArrayList<Person>();
+
     public Scanner sc = new Scanner(System.in);
 
     public boolean checkName() {
@@ -49,7 +49,7 @@ public class AddressBookDetails {
             System.out.println("Enter StateName");
             state = sc.next();
 
-            System.out.println("Enter pinCode");
+            System.out.println("Enter PinCode");
             pin = sc.nextInt();
 
             System.out.println("Enter PhoneNumber");
@@ -58,7 +58,7 @@ public class AddressBookDetails {
             System.out.println("Enter Email");
             email = sc.next();
         }
-        list.add(new Person(firstName,lastName,area,city,state,pin,phoneNumber,email));
+        list.add(new Person(firstName, lastName, area, city, state, pin, phoneNumber, email));
     }
 
     public String editDetails() {
@@ -81,7 +81,7 @@ public class AddressBookDetails {
             list.get(indexNum).setState(sc.next());
 
             System.out.println("Enter pinCode");
-            list.get(indexNum).setPin(sc.nextInt());
+            list.get(indexNum).setZip(sc.nextInt());
 
             System.out.println("Enter PhoneNumber");
             list.get(indexNum).setPhoneNumber(sc.nextInt());
@@ -111,5 +111,4 @@ public class AddressBookDetails {
 
     public String toString() {
         return addressBookName;
-    }
-}
+    }}
