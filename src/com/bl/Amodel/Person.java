@@ -1,95 +1,101 @@
 package com.bl.Amodel;
 
 public class Person {
-    public String firstName;
-    public String lastName;
-    public String area;
-    public String city;
-    public String state;
-    public int pin;
-    public int phoneNumber;
-    public String email;
+    private String firstName;
+    private String lastName;
+    private String area;
+    private String city;
+    private String state;
+    private int pin;
+    private long phoneNumber;
+    private String email;
 
-    public Person(String firstName, String lastName, String area, String city, String state, int pin,
-            int phoneNumber, String email) {
-
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.area = area;
+   public Person(String first_name, String last_name, String address, String city, String state, int zip,
+            long phone_number, String email) {
+        this.firstName = first_name;
+        this.lastName = last_name;
+        this.area = address;
         this.city = city;
         this.state = state;
-        this.pin = pin;
-        this.phoneNumber = phoneNumber;
+        this.pin = zip;
+        this.phoneNumber = phone_number;
         this.email = email;
     }
-      
-	public String getFirstName() {
-		return firstName;
-	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getArea() {
-		return area;
-	}
-
-	public void setArea(String area) {
-		this.area = area;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
-
-	public int getPin() {
-		return pin;
-	}
-
-    public void setpin(int nextInt) {
-
+    Person() {
+        this(" ", " ", " ", " ", " ", 0, 0, " ");
     }
-	public int getPhoneNumber() {
-		return phoneNumber;
-	}
 
-	public void setPhoneNumber(int phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+    public String getFirstName() {
+        return this.firstName;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setFirstName(String fname) {
+        this.firstName = firstName;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public void setLastName(String lname) {
+        this.lastName = lastName;
+    }
+
+    public String getArea() {
+        return this.area;
+    }
+
+    public void setArea(String ar) {
+        this.area = area;
+    }
+
+    public String getCity() {
+        return this.city;
+    }
+
+    public void setCity(String cty) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return this.state;
+    }
+
+    public void setState(String st) {
+        this.state = state;
+    }
+
+    public int getPin() {
+        return this.pin;
+    }
+
+    public void setZip(int zp) {
+        this.pin = pin;
+    }
+
+    public long getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    public void setPhoneNumber(int phn) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String eml) {
+        this.email = email;
+    }
 
     public String toString() {
         return "Details of: " + firstName + " " + lastName + "\n" + "Area: " + area + "\n" + "City: " + city + "\n"
-                + "State: " + state + "\n" + "Pin: " + pin + "\n" + "Phone Number: " + phoneNumber + "\n" + "Email: "
+                + "State: " + state + "\n" + "pin: " + pin + "\n" + "Phone Number: " + phoneNumber + "\n" + "Email: "
                 + email;
     }
 
+    public void setPin(int nextInt) {
 
-	    }
+    }	    }

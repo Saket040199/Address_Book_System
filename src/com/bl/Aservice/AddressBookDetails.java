@@ -10,7 +10,8 @@ public class AddressBookDetails {
     public String firstName;
     public String lastName;
     public String area, city, state, email;
-    public int pin, phoneNumber;
+    public int pin;
+    public long phoneNumber;
     public static int indexNum;
 
     public AddressBookDetails(String addressBookName) {
@@ -18,11 +19,9 @@ public class AddressBookDetails {
     }
 
     public static ArrayList<Person> list = new ArrayList<Person>();
-
-    Scanner sc = new Scanner(System.in);
+    public Scanner sc = new Scanner(System.in);
 
     public boolean checkName() {
-
         System.out.println("Enter First Name");
         firstName = sc.next();
 
@@ -40,9 +39,7 @@ public class AddressBookDetails {
     }
 
     public void addDetails() {
-
         if (!checkName()) {
-
             System.out.println("Enter Area");
             area = sc.next();
 
@@ -61,14 +58,12 @@ public class AddressBookDetails {
             System.out.println("Enter Email");
             email = sc.next();
         }
-        list.add(new Person(firstName, lastName, area, city, state, pin, phoneNumber, email));
+        list.add(new Person(firstName,lastName,area,city,state,pin,phoneNumber,email));
     }
 
     public String editDetails() {
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Details to be Edited: ");
-
         if (checkName()) {
             System.out.println("Enter FirstName");
             list.get(indexNum).setFirstName(sc.next());
@@ -86,14 +81,13 @@ public class AddressBookDetails {
             list.get(indexNum).setState(sc.next());
 
             System.out.println("Enter pinCode");
-            list.get(indexNum).setpin(sc.nextInt());
+            list.get(indexNum).setPin(sc.nextInt());
 
             System.out.println("Enter PhoneNumber");
             list.get(indexNum).setPhoneNumber(sc.nextInt());
 
             System.out.println("Enter Email");
             list.get(indexNum).setEmail(sc.next());
-
             return "Edited";
         }
         return "Name Not Available in List";
