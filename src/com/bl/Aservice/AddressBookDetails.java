@@ -137,15 +137,7 @@ public class AddressBookDetails {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Entered Address Book -> " + addressBookNameToOperate);
-        //Default Contacts Entry
-//        Contacts defaultContact1 = new Contacts("Aditya", "Verma", "3/40 LDA Colony", "Lucknow", "UP", 224045, "8889036440", "addressbook1@capgemini.com");
-//        addContactToAddressBook(defaultContact1);
-//        Contacts defaultContact2 = new Contacts("Amit", "Sharma", "4/11 Gomti Nagar", "Lucknow", "UP", 225058, "8846576440", "addressbook2@capgemini.com");
-//        addContactToAddressBook(defaultContact2);
-//        Contacts defaultContact3 = new Contacts("Ashok", "Kumar", "8/22 Kalyan Nagar", "Kanpur", "UP", 289558, "8123476440", "addressbook3@capgemini.com");
-//        addContactToAddressBook(defaultContact3);
-
-        boolean operate = true;
+            boolean operate = true;
         while (operate) {
             System.out.println("1. Create and Add Contact");
             System.out.println("2. Edit Contact");

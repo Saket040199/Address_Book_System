@@ -43,7 +43,7 @@ public class AddressBookController {
 
 
     public static void main(String[] args) {
-    	System.out.println("Welcome to AddressBook\n");
+    	System.out.println("\t\t\t Welcome to AddressBook\n");
 
         Scanner sc = new Scanner(System.in);
         AddressBookController dictionaryObject = new AddressBookController();
